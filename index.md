@@ -1,37 +1,108 @@
-## Welcome to GitHub Pages
+# Web3.0 技术栈
 
-You can use the [editor on GitHub](https://github.com/adammo001/Web3.0/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Web3.0 听上去相当美好，下图将 Web3.0 相关的技术与现在的互联网相关技术做了对⽐。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image](https://user-images.githubusercontent.com/25640406/140485780-58777444-d134-457a-be36-30d0eb1fa753.png)
 
-### Markdown
+## 名称
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ 现在，所有的网站我们称之为 Web，应⽤称之为 APP。 Web3.0 时代，刚开始时，会称之为 DWeb 或者 DApp，⽤来和 Web/App 区分，但最终成熟后会把D去掉。
 
-```markdown
-Syntax highlighted code block
+## 入口
 
-# Header 1
-## Header 2
-### Header 3
+⼊⼝分为两⼤类：⼀类是浏览器和应⽤，⼀类是操作系统。
+前者包括移动端 App、移动端浏览器、桌⾯应⽤程序、桌⾯浏览器等。操作系统包括桌⾯操作系统，如： Windows、 LInux、 MacOS 等，移动端操作系统，如：安卓、苹果 IOS 等。
+互联网在经过了 25 年的⾼速发展后，我们发现，所有⼊⼝都已经⽆⼀例外的被全球⼤⼚霸占了。
+在 Web3.0 时代，⼊⼝将是 DWeb 浏览器以及数字钱包。目前，才刚刚开始。
 
-- Bulleted
-- List
+## 传输协议
+现在，在网络应⽤层层⾯，常⽤的传输协议有： http/https/ftp/smtp等。 Web3.0 属于网络应⽤层的⾰新，但仍基于现有的互联网技术，不太会改变传输层以下的网络协议。但是， Web3.0 时代肯定会出现若干个新的点对点网络协议。
+目前，已经⽐较成熟的 P2P 网络协议有：
 
-1. Numbered
-2. List
+![image](https://user-images.githubusercontent.com/25640406/140486295-04839af5-bdca-48c4-b102-071be1c96eeb.png)
 
-**Bold** and _Italic_ and `Code` text
+以上协议中，⽐较流⾏的有 BT、 libp2p 和 Bitcoin。其中能⽀持 Web应⽤的是 libp2p 协议，其他更偏向于⽂件传输。
+⼀个好的 DWeb 浏览器应该尽可能涵盖以上主流协议，同时⽀持传统的 http/https 协议，并能⽅便的访问⼤量内容。如果以此为标准的话，上⾯所有 P2P 协议可能都不合格，协议层的创新与突破将在很⼤程度上决定了 Web3.0 ⼤发展时代何时到来。
 
-[Link](url) and ![Image](src)
-```
+## 内容存储
+ 现在，互联网上⼏乎所有的开放性内容都存在云服务器上，亚⻢逊、⾕歌、微软、阿⾥、百度等⼤⼚已经给我们提供了易⽤、可靠、价格实惠的存储与计算服务。
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+云存储的共同特点是所有内容可以被⽅便的增删改查，这增加了数据的不安全⻛险隐患。
 
-### Jekyll Themes
+除此之外，⼤部分存在云服务器上的内容被服务器挡住，内容⽆法直接暴露在网络中，使得⼤数据分析、⼈⼯智能技术、搜索引擎技术在对网络内容进⾏智能分析时难以展开⼿脚，这也是语义网⼀直⽆法得到实质性进展的原因。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adammo001/Web3.0/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+以 IPFS 为⾸的⼀些分布式存储技术寻找到了突破点，通过 Hash 值直接访问，并可进⼀步套接上语义描述 metadata，从⽽让网络上的内容更智能。⽽这种对内容直接打上 metadata 标签后的价值，将远远超过⺫前对 Html/Xml 等⽂档打标签的价值。
 
-### Support or Contact
+分布式存储是实现语义网的重要解决⽅案，⽽语义网 1⼜是 Web3.0 的重要特征之⼀。这是分布式存储的最具潜⼒的价值所在。
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## 数据库
+
+做过 Web 或 App 开发的朋友都知道，⼀个应⽤，通常由三个模块组成：表现层、数据层和⼀致性逻辑控制层，即 MVC 框架。
+
+数据层包括结构化数据和⾮结构化数据，⾮结构化数据存储就是上⾯提到的内容存储，结构化数据存储⼀般使⽤结构化数据库如 mysql、Oracle 等实现。
+
+与内容存储⼀样，数据库也存在着数据内容可以被⽅便的增删改查的⻛险。
+
+此前全球最⼤的云计算服务商，亚⻢逊公司在AWS ⼤会上发布了⼀个新的服务：量⼦账本数据库(QLDB)。 QLDB提供了⼀个只能追加、不可篡改的数据记录集，它保存了所有更改的安全⽇志。⽽且，所做的更改以加密⽅式链接并可验证。
+
+QLDB 虽然没有采取区块链技术，但在从普通数据库⾛向“可信数据库”的道路上迈出了重要的⼀⼤步。
+
+相⽐于 QLDB，去中⼼化数据库（Decentralized DB，简称 DDB）则⾛得更远， DDB 除了需要⼀个类似于 QLDB 强⼤⾼效的时间戳作为不可篡改的证明外，还需要在分布式网 络上实现数据⼀致性共识。
+
+目前分布式数据库技术刚刚起步，其中 GUN 和基于 IPFS 网络的Orbit-db 是目前已经投⼊实⽤的⽅案。
+
+## ⼀致性逻辑
+
+所谓的⼀致性逻辑，就是各个客户端需要共同执⾏的数据操作与通讯指令。
+
+现有的所有 Web/App 应⽤，都把⼀致性逻辑写在服务器上，⽽在客户端做表现层。客户端与服务器数据请求与反馈有各种实现⽅案，如Ajax、 XMLHttpRequest、 REST、 WebSoket、 Pubsub 等等。
+
+服务器上的逻辑⼀般会通过 php/java/go/c++等语⾔实现。在 Web3.0 时代，将没有服务器，或者说每个节点都是服务器。因此，需要⽤全新的解决⽅案去实现现有服务器上的⼀致性逻辑。这个解决⽅案就是“智能合约”。
+
+智能合约其实是⼀种“函数即服务”（Function as a Service，简称FaaS）。⼀个智能合约中会包括很多函数（或者称为⽅法method），那些公⽤（public）的⽅法可以被外部单独调⽤，实现某项功能，这就是 FaaS。
+
+所有区块链上的智能合约都是 FaaS。以太坊的智能合约是⼀种不可篡改的 Faas， EOS 的智能合约则是⼀种可以不断迭代的 FaaS。
+
+智能合约是⼀种“⽆服务器（Serverless）”架构。与以太坊⼏乎同时诞⽣的亚⻢逊 AWS Lombda，也是“⽆服务器”，但是后者的所谓 Serverless 并不意味着没有服务器，只是服务器以特定功能的第三⽅服务的形式存在。
+
+Web3.0 时代，我们需要的是通过智能合约实现的真正的Serverless，⽽不是亚⻢逊云的中⼼化 Serverless。
+
+## 支付
+
+互联网在很⻓的发展时期内，⼀直充当信息的⾼速传输⼯具， 1998 年Paypal 成⽴，解决了网上⽀付问题，使得电⼦商务、在线消费成为了可能。
+
+⼗年后的 2008 年⽐特币的诞⽣，解决了在没有第三⽅银⾏或者⽀付机构作为信⽤担保的情况下的⽀付问题。⽏庸置疑，在 Web3.0 时代，在点对点网络上，基于区块链的⽀付⼿段是唯⼀的选择。⽆论是⽐特币，还是 Ripple、 Ethereum，都是⽀付⽅式。
+
+⽀付，是区块链的最重要的功能，也是迄今为⽌区块链最接地⽓、最受欢迎的功能。
+
+## 用户管理
+
+前⾯提到，现在的⽤户管理是“⽤户名-密码”⽅式，在 Web3.0 时代，将以“公钥/私钥”管理并验证⽤户⾝份。
+
+但这种模式也并⾮绝对，为了便于⽤户使⽤，往往会将公私钥体系与“⽤户名-密码”模式相结合。
+
+IPFS 原⼒区开发的 DWeb 浏览器 ForceNet 以及美国最⼤的 DWeb浏览器公司的 Blockstack 都不约⽽同地采取了“ID+密码+公私钥”的双重保护机制。
+
+这种⽤户⾝份管理与验证机制⼀⽅⾯保障了数据安全，另⼀⽅⾯也兼顾了⽤户体验，在很⼤程度上解决了上⾯提到的 Web3.0 时代最⼤的痛点。
+
+但是，仅仅解决了公私钥安全与⽤户体验的⽭盾是远远不够的，⽤户管理系统中还需要与 DID ⾝份管理紧密结合。只有这样才能实现可信⾝份，才能防⽌ Web3.0 时代由于信息过度⾃由⽽导致的内容泛滥危机。
+
+## 域名系统
+
+⽆论是 IP 地址还是 Hash 地址，都⾮常难以记忆。为此，有了域名系统（Domain Name System， DNS）， DNS 是万维网上作为域名和IP 地址相互映射的⼀个分布式数据库，能够使⽤户更⽅便的访问互联网，⽽不⽤去记住 IP 数串。例如我们可以在浏览器中输⼊baidu.com，⽽不需要输⼊： 220.181.57.216，尽管两者都能够打开百度⾸⻚，但前者明显更便于记忆与传播。 baidu.com 就是 DNS 给我们带来的⽅便记忆的东⻄。
+
+但是，现在的 DNS 已经被⾼度的中⼼化控制，于是产⽣了去中⼼化的域名系统（Decentralized Domain Name System， DDNS）。最著名的 DDNS 系统就是 Namecoin，任何⼈都可以花很少钱注册⼀个以.bit 结尾的域名，⾮常⽅便。这套域名系统现在仍旧运⾏在Namecoin 区块链上，没有任何⼈能够对其进⾏干涉。
+
+同样的 DDNS 还有 EmerCoin 的.coin 域名系统，以太坊的.eth 域名系统 ENS 等等。
+
+## 技术成熟度
+
+Web3.0 是以上⼋项技术栈的综合体，缺⼀不可。目前，以上技术的发展阶段和成熟度不尽相同。
+
+下表是对以上技术的成熟度做了调查后，做的⼀个评分：
+
+![image](https://user-images.githubusercontent.com/25640406/140487968-4a954541-c198-408e-97a6-971b5e3ae125.png)
+
+
+区块链不是 Web3.0 的开始，更不是 Web3.0 的终点，区块链是开启 Web3.0 ⼤⻔的⾦钥匙。理解区块链理念的⼈会更懂
+Web3.0，也会在即将到来的 Web3.0 ⼤潮中获取最⼤的红利。
